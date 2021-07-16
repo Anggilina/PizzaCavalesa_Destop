@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootLogin" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="513.0" layoutY="249.0" prefHeight="328.0" prefWidth="436.0" style="-fx-background-color: #ffdd4c;" />
+      <JFXTextField fx:id="txtUserName" focusColor="BLACK" labelFloat="true" layoutX="563.0" layoutY="286.0" prefHeight="46.0" prefWidth="327.0" promptText="Nama Lengkap" style="-fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="563.0" layoutY="430.0" prefHeight="38.0" prefWidth="327.0" promptText="Kata Sandi" style="-fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="153.0" fitWidth="210.0" layoutX="640.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/logopizza.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="805.0" layoutY="595.0" prefHeight="38.0" prefWidth="85.0" style="-fx-background-color: #FFD700;" text="DAFTAR">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="29.0" fitWidth="48.0" layoutX="852.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="860.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="700.0" fitWidth="504.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Pizza.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUserName1" focusColor="BLACK" labelFloat="true" layoutX="563.0" layoutY="357.0" prefHeight="46.0" prefWidth="327.0" promptText="Email" style="-fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword1" focusColor="BLACK" labelFloat="true" layoutX="563.0" layoutY="497.0" prefHeight="38.0" prefWidth="327.0" promptText="Konfirmasi Kata Sandi" style="-fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="29.0" fitWidth="24.0" layoutX="860.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/unlock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="44.0" layoutX="853.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/46951-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

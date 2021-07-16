@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ecf0f1;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXSpinner layoutX="566.0" layoutY="553.0" prefHeight="97.0" prefWidth="103.0" radius="40.0" />
+      <ImageView fitHeight="385.0" fitWidth="476.0" layoutX="387.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/logopizza.png" />
+         </image>
+      </ImageView>
+      <Text fill="#e49e36" fontSmoothingType="LCD" layoutX="194.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SISTEM MANAJEMEN RESTORAN" textAlignment="CENTER">
+         <font>
+            <Font name="OCR A Extended" size="55.0" />
+         </font>
+      </Text>
+      <Text fill="#ce1616" fontSmoothingType="LCD" layoutX="380.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PIZZA CAVALESA" textAlignment="CENTER">
+         <font>
+            <Font name="OCR A Extended" size="55.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

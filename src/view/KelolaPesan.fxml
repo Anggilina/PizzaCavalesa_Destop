@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootOrderForm" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewcontroller.KelolahPesanController">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="489.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEMESANAN" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="34.0" />
+         </font>
+      </Text>
+      <Label layoutX="34.0" layoutY="39.0" opacity="0.9" prefHeight="88.0" prefWidth="1128.0" style="-fx-background-color: #988e75;" />
+      <Label layoutX="34.0" layoutY="133.0" opacity="0.9" prefHeight="111.0" prefWidth="1128.0" style="-fx-background-color: #988e75;" />
+      <Label layoutX="435.0" layoutY="87.0" prefHeight="22.0" prefWidth="22.0" style="-fx-background-color: #ffffff;" />
+      <JFXDatePicker fx:id="txtODate" defaultColor="BLACK" layoutX="304.0" layoutY="84.0" prefHeight="28.0" prefWidth="160.0" promptText="Order Date" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;">
+         <styleClass>
+            <String fx:value="jfx-date-picker" />
+            <String fx:value="date-picker" />
+         </styleClass></JFXDatePicker>
+      <JFXTextField fx:id="txtcustomer_Id" focusColor="WHITE" labelFloat="true" layoutX="75.0" layoutY="160.0" onAction="#Cari" prefHeight="35.0" prefWidth="85.0" promptText="ID" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtcustomer_Nama" focusColor="WHITE" labelFloat="true" layoutX="213.0" layoutY="160.0" prefHeight="35.0" prefWidth="168.0" promptText="Nama Customer" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTpno" focusColor="WHITE" labelFloat="true" layoutX="427.0" layoutY="160.0" prefHeight="35.0" prefWidth="168.0" promptText="No Hp" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtalamat" focusColor="WHITE" labelFloat="true" layoutX="827.0" layoutY="160.0" prefHeight="35.0" prefWidth="252.0" promptText="Alamat" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="1015.0" layoutY="208.0" onAction="#Cari" prefHeight="27.0" prefWidth="112.0" style="-fx-background-color: #ddda76;" text="Cari">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="885.0" layoutY="207.0" onAction="#addCustomer" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: #ddda76;" text="Tambah">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="384.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/User_50px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="603.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Phone_100px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="1083.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Home_100px.png" />
+         </image>
+      </ImageView>
+      <Label layoutY="636.0" opacity="0.9" prefHeight="64.0" prefWidth="1200.0" style="-fx-background-color: #ffdd4c;" />
+      <Label layoutX="34.0" layoutY="251.0" opacity="0.9" prefHeight="104.0" prefWidth="1128.0" style="-fx-background-color: #988e75;" />
+      <JFXTextField fx:id="txtpizza_Id" focusColor="WHITE" labelFloat="true" layoutX="84.0" layoutY="274.0" onAction="#CariItem" prefHeight="35.0" prefWidth="91.0" promptText="ID" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtpizza_Nama" focusColor="WHITE" labelFloat="true" layoutX="214.0" layoutY="274.0" prefHeight="35.0" prefWidth="168.0" promptText="Nama" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtharga" focusColor="WHITE" labelFloat="true" layoutX="674.0" layoutY="274.0" prefHeight="35.0" prefWidth="91.0" promptText="Harga" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtJumlah" focusColor="WHITE" labelFloat="true" layoutX="809.0" layoutY="274.0" onAction="#setOrderPrice" prefHeight="35.0" prefWidth="61.0" promptText="Jumlah" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnCariItem" buttonType="RAISED" layoutX="911.0" layoutY="314.0" onAction="#CariItem" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: #ddda76;" text="Cari">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddItem" buttonType="RAISED" layoutX="1037.0" layoutY="314.0" onAction="#btnAddOrder" prefHeight="27.0" prefWidth="112.0" style="-fx-background-color: #ddda76;" text="Tambah">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblPesan" layoutX="34.0" layoutY="366.0" prefHeight="203.0" prefWidth="919.0" style="-fx-background-color: #988e75; -fx-opacity: 90%;">
+         <columns>
+            <TableColumn fx:id="tblCode" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="tblPizza_Nama" prefWidth="342.0" text="Nama Menu" />
+            <TableColumn fx:id="tblHarga" prefWidth="180.0" text="Harga" />
+            <TableColumn fx:id="tblJumlah" prefWidth="116.0" text="Jumlah" />
+            <TableColumn fx:id="tblSubTotal" prefWidth="208.0" text="SubTotal" />
+         </columns>
+      </TableView>
+      <Label layoutX="982.0" layoutY="371.0" opacity="0.9" prefHeight="194.0" prefWidth="180.0" style="-fx-background-color: #988e75;" />
+      <JFXButton fx:id="btnRemoveItem" buttonType="RAISED" layoutX="1016.0" layoutY="383.0" onAction="#btnRemoveItem" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Hapus Kolom" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btntambah" buttonType="RAISED" layoutX="1006.0" layoutY="511.0" onAction="#btntambah" prefHeight="38.0" prefWidth="133.0" style="-fx-background-color: #ddda76;" text="Tambah Pesan">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="913.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SubTotal: ">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="384.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Shopping%20Bag_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="772.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Money_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="168.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Electronic%20Identity%20Card_100px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="178.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Hashtag_50px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtOID" focusColor="WHITE" labelFloat="true" layoutX="99.0" layoutY="79.0" prefHeight="35.0" prefWidth="127.0" promptText="Order No" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" text="0001" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="lblSubTotal" fill="WHITE" layoutX="1057.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :" wrappingWidth="77.56414794921875">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblTotal" layoutX="119.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="189.71551644802094">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnBeranda" buttonType="RAISED" layoutX="603.0" layoutY="648.0" onAction="#btnMainMenu" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #988e75;" text="Beranda" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnKeluar" buttonType="RAISED" layoutX="455.0" layoutY="649.0" onAction="#btnLogOut" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #f22613;" text="Keluar" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtemail" focusColor="WHITE" labelFloat="true" layoutX="649.0" layoutY="160.0" prefHeight="35.0" prefWidth="133.0" promptText="Email" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="lblKembalian" layoutX="632.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kembalian :" wrappingWidth="149.56414794921875">
+         <font>
+            <Font name="Calibri" size="27.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUang" focusColor="BLACK" labelFloat="true" layoutX="337.0" layoutY="586.0" onAction="#setKembalian" prefHeight="35.0" prefWidth="180.0" promptText="Bayar" style="-fx-prompt-text-fill: #000000; -fx-text-inner-color: #000000;" unFocusColor="#070707">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="789.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/View%20Details_50px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtdeskripsi" focusColor="WHITE" labelFloat="true" layoutX="427.0" layoutY="274.0" prefHeight="35.0" prefWidth="201.0" promptText="Deskripsi" style="-fx-prompt-text-fill: #ffffff; -fx-text-inner-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="632.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Transaction%20List_100px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
